@@ -1,10 +1,18 @@
-function entrarNoCurso() {
-  console.log("Entrou no Curso");
-}
-function sairDoCurso() {
-  console.log("Saiu do curso");
-}
+let currentIndex = 0;
 
-function escolherCurso() {
-  console.log("Escolheu o Curso");
+function moverCarrossel(direction) {
+  const container = document.querySelector(".carrossel-container");
+  const items = document.querySelectorAll(".carrossel-item");
+  const totalItems = items.length;
+
+  currentIndex += direction;
+
+  if (currentIndex < 0) {
+    currentIndex = totalItems - 1;
+  } else if (currentIndex >= totalItems) {
+    currentIndex = 0;
+  }
+
+  const offset = -currentIndex * 100;
+  container.style.transform = `translateX(${offset}%)`;
 }

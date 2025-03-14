@@ -1,23 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <title>Testando o Git</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Imagens</title>
     <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
 </head>
 
 <body>
-    <h1>Mini curso git mudança mudança</h1>
-    <h1>ME MATA DE UMA VEEEEEEEEEZ</h1>
-    <footer>
-        <p>Desenvolvido por Theozinhho amor da Lari</p>
-        <h2>Eu sou o amorzinho da lari e amo ela de mais da conta
-            <p>O theo sempre vai amar a Larissa</p>
-        </h2>
-        <button>APERTE AQUI la</button>
-    </footer>
-
+    <div class="carrossel">
+        <div class="carrossel-container">
+            <div class="carrossel-item">
+                <img src="/imagens/imagem1.jpg" alt="Imagem 1">
+            </div>
+            <div class="carrossel-item">
+                <img src="/imagens/imagem2.jpg" alt="Imagem 2">
+            </div>
+            <div class="carrossel-item">
+                <img src="/imagens/imagem1.jpg" alt="Imagem 3">
+            </div>
+            <!-- Adicione mais imagens conforme necessário -->
+        </div>
+        <button class="carrossel-btn prev" onclick="moverCarrossel(-1)">&#10094;</button>
+        <button class="carrossel-btn next" onclick="moverCarrossel(1)">&#10095;</button>
+    </div>
 </body>
 
 </html>
